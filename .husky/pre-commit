@@ -3,3 +3,4 @@
 
 echo "Husky! woof"
 npx eslint --fix src/**/*.js
+npx prettier -w src/**/*.js
