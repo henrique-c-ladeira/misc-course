@@ -3,13 +3,16 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 330px;
   width: 352px;
-  left: 0px;
-  top: 0px;
+
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
 
   padding: 26px;
   background: #ffffff;
   box-shadow: 5px 6px 7px 7px rgba(0, 0, 0, 0.25);
   border-radius: 0px 50px;
+  margin: auto;
 `;
 
 export const Text = styled.div`
@@ -19,6 +22,7 @@ export const Text = styled.div`
   font-size: 20px;
   line-height: 20px;
 
+  text-align: center;
   color: #000000;
 `;
 
@@ -26,11 +30,24 @@ export const BioText = styled.div`
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  font-family: ${(props) => props.error || 'Roboto'};
+  font-weight: thin;
 
-  color: #000000;
+  text-align: justify;
+
+  color: ${(props) => (props.error ? 'red' : '#000000')};
 `;
 
 export const Avatar = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 10rem;
+  width: 10rem;
+  object-fit: contain;
+  border: 3px solid;
+  border-radius: 5%;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
