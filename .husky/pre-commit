@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 echo "Husky! woof"
-npx eslint --fix src/**/*.js
-npx prettier -w src/**/*.js
+# npx eslint --fix src/**/*.js
+# npx prettier -w src/**/*.js
